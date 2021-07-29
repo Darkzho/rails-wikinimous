@@ -1,0 +1,6 @@
+
+<p><%= @article.content %></p>
+
+<%= link_to "go back", articles_path  %>
+<%= link_to "edit task", edit_article_path  %>
+<%= link_to "Delete", article_path(@article), method: :delete, data: { confirm: "Estás seguro de borrar" } %>
