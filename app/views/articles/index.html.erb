@@ -1,9 +1,16 @@
-<%= link_to "Create an article", new_article_path%>
+<div class="navbar">
+  <p>Wikinimous</p>
+  <%= link_to "Create an article", new_article_path, class:"btn"%>
+</div>
 
 <ul>
-  <% @articles.each do |article| %>
-    <li><%= link_to article.title, article_path(article) %></li>
-    <%= article.content %>
-  <% end %>
+  <div class="articles-wrapper">
+      <% @articles.each do |article| %>
+        <div class="article-container">
+          <li><%= link_to article.title, article_path(article), class: "article-link" %></li>
+          <p><%= article.content %></p>
+        </div>
+      <% end %>
+  </div>
 </ul>
 
